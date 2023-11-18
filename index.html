@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comforter&family=Lobster&family=Roboto:ital,wght@0,500;1,400&family=Ubuntu&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Crud System</title>
+</head>
+
+<body>
+    <div class="crud">
+        <div class="head">
+            <h2>Crud System</h2>
+            <p>Product Management System</p>
+        </div>
+        <div class="input">
+            <input type="text" name="" id="title" placeholder="Title">
+            <div class="price">
+                <input onkeyup="getTOtal()" type="number" name="" id="price" placeholder="Price">
+                <input onkeyup="getTOtal()" type="number" name="" id="taxes" placeholder="Taxes">
+                <input onkeyup="getTOtal()" type="number" name="" id="ads" placeholder="Ads">
+                <input onkeyup="getTOtal()" type="number" name="" id="discount" placeholder="Discount">
+                <small id="total"></small>
+            </div>
+            <input type="number" name="" id="count" placeholder="Count">
+            <input type="text" name="" id="category" placeholder="Category">
+            <button id="submit">Create</button>
+        </div>
+        <div class="output">
+            <div class="serchBlock">
+                <input onkeyup="searchData(this.value)" type="text" name="" id="search" placeholder="Search">
+                <div class="btnsearch">
+                    <button onclick="getSearchMode(this.id)" id="searchtitle">Search By Title</button>
+                    <button onclick="getSearchMode(this.id)" id="searchcategory">Search By Category</button>
+                </div>
+            </div>
+            <div id="deleteAll">
+
+            </div>
+            <table>
+                <tr>
+                    <th>ID</th> 
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Taxes</th>
+                    <th>Ads</th>
+                    <th>Discount</th>
+                    <th>Total</th>
+                    <th>Category</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="./custome.js"></script>
+</body>
+
+</html>
